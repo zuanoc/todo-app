@@ -1,0 +1,8 @@
+.github
+.git
+node_modules
+dist
+diagram
+terraform
+.eslintrc.js
+.yarn/cache

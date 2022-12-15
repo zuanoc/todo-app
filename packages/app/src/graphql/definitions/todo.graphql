@@ -1,0 +1,31 @@
+fragment TodoData on Todo {
+	id
+	name
+	isCompleted
+}
+
+query GetTodoList {
+	getTodoList {
+		...TodoData
+	}
+}
+
+mutation AddTodo($input: TodoAddInput!) {
+	createTodo(todoAddInput: $input) {
+		...TodoData
+	}
+}
+
+
+mutation UpdateTodo($input: TodoUpdateInput!) {
+	updateTodo(todoUpdateInput: $input) {
+		...TodoData
+	}
+}
+
+
+mutation RemoveTodo($id: String!) {
+	removeTodo(id: $id) {
+		...TodoData
+	}
+}

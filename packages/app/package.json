@@ -1,0 +1,68 @@
+{
+  "name": "@todo/app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "env-cmd -f .env.development.local react-scripts build",
+    "build:dev": "CI=false env-cmd -f .env.development react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "graphql-codegen": "graphql-codegen --config codegen.yml"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@emotion/react": "^11.10.4",
+    "@emotion/serialize": "^1.0.3",
+    "@emotion/styled": "^11.10.4",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "axios": "^0.27.2",
+    "graphql": "^16.6.0",
+    "graphql-request": "5.0.0",
+    "graphql-tag": "^2.12.6",
+    "immer": "^9.0.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.0",
+    "tailwindcss": "^3.1.8",
+    "twin.macro": "^2.8.2",
+    "use-bus": "^2.3.1",
+    "web-vitals": "^2.1.4",
+    "zustand": "^3.7.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "^3.2.1",
+    "@graphql-codegen/cli": "2.12.0",
+    "@graphql-codegen/client-preset": "1.0.2",
+    "@graphql-codegen/introspection": "2.2.1",
+    "@graphql-codegen/typescript": "2.7.3",
+    "@graphql-codegen/typescript-graphql-request": "4.5.8",
+    "@graphql-codegen/typescript-operations": "2.5.3",
+    "babel-plugin-twin": "^1.0.2",
+    "env-cmd": "^10.1.0",
+    "typescript": "~4.5.2"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  }
+}
